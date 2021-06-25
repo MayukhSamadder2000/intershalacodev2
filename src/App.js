@@ -1,23 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
 
+import Card from './components/Card/Card';
+
+import img1 from './assets/cricket.jpg';
+import img2 from './assets/football.jpg';
+
+
+
 function App() {
+
+
+  const image=[{img:img1,class:"card card1"},{img:img2,class:"card card2"}];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="heading">HIGHLIGHTS</div>
+      <div className="rule"></div>
+      <div className="cardContainer">
+      {image.map((item)=>{
+        return (
+            <Card image={item.img} cls={item.class}/>
+        )
+      })}
+      </div>
     </div>
   );
 }

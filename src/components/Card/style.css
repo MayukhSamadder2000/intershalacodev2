@@ -1,0 +1,108 @@
+.card {
+  width: 20rem;
+  height: 22rem;
+  padding: 1rem 1rem;
+
+  position: relative;
+  border-radius: 20px;
+  z-index: 0;
+  cursor: pointer;
+  color: #fff;
+}
+.card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #124915;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  z-index: -1;
+  transform: scale(0.85);
+  transform-origin: right;
+  transition: 0.4s ease;
+}
+.card1::after {
+  background-color: #141b57;
+}
+.card:hover::after {
+  transform: scale(1);
+}
+.card .top {
+  width: 100%;
+  height: 70%;
+  position: relative;
+  transition: 0.3s ease;
+}
+.card .top:hover .icons {
+  transform: rotate(0deg);
+  top: 10%;
+  right: 10%;
+  opacity: 1;
+  font-size: 1.3rem;
+}
+.card .top img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 10px 10px 10px rgba(1, 1, 1, 0.35);
+}
+.icons {
+  color: #fff;
+  position: absolute;
+  top: 0%;
+  right: 18%;
+  opacity: 0;
+  transform: rotate(-30deg);
+  transition: 0.3s ease;
+}
+.text {
+  margin-left: 1em;
+}
+.text .big {
+  font-size: 1.3rem;
+}
+
+.card .btm {
+  height: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+.card .btm .imgContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.card .btm .imgContainer .imgContent {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #124915;
+  border-radius: 10px;
+  position: relative;
+}
+.card1 .btm .imgContainer .imgContent {
+  background-color: #141b57;
+}
+.card .btm .imgContainer .imgContent img {
+  width: 80%;
+  height: 80%;
+  border-radius: 10px;
+}
+
+.card .btm .dots {
+  display: flex;
+  align-items: center;
+}
+.card .btm .dots .circle {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 2px;
+}
